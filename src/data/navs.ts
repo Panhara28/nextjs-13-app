@@ -19,4 +19,8 @@ export const navData = [
     url: "/products",
     text: "Products",
   },
+  {
+    url: "/articles",
+    text: "Articles",
+  },
 ];
