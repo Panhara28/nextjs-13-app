@@ -27,4 +27,8 @@ export const navData = [
     url: "/cryptocurrencies",
     text: "Crypto Currency",
   },
+  {
+    url: "/applications",
+    text: "Application",
+  },
 ];

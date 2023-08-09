@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Loading from "../loading";
+import { Suspense } from "react";
 
 async function getPost() {
   const posts = fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -13,17 +15,19 @@ export default async function Posts() {
 
   return (
     <>
-      <ul>
-        {posts.slice(0, 5).map((post: any) => {
-          return (
-            <li>
-              <Link href={`/articles/${post.title.split(" ").join("-")}`}>
-                {post.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Suspense fallback={<Loading />}>
+        <ul>
+          {posts.slice(0, 5).map((post: any) => {
+            return (
+              <li>
+                <Link href={`/articles/${post.title.split(" ").join("-")}`}>
+                  {post.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </Suspense>
     </>
   );
 }
