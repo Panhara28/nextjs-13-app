@@ -29,7 +29,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={inter.className}
-        style={{ border: "2px dashed #000", padding: "0px 15px 15px 15px" }}
+        style={{
+          border: "2px dashed #000",
+          padding: "0px 15px 15px 15px",
+          margin: 20,
+        }}
       >
         <Navigation />
         <h1 style={{ margin: "10px 0px" }}>Root Layout</h1>
