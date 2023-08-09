@@ -1,8 +1,10 @@
+"use client";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Navigation from "@/components/navigations";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +18,12 @@ export default function RootLayout({
   children,
   analytics,
   team,
+  modal,
 }: {
   children: React.ReactNode;
   analytics: React.ReactNode;
   team: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -31,6 +35,7 @@ export default function RootLayout({
         <h1 style={{ margin: "10px 0px" }}>Root Layout</h1>
         <Header />
         {children}
+        {modal}
         <Footer />
       </body>
     </html>

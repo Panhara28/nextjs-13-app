@@ -31,4 +31,8 @@ export const navData = [
     url: "/applications",
     text: "Application",
   },
+  {
+    url: "/photos",
+    text: "Photos",
+  },
 ];
