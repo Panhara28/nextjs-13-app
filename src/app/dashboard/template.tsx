@@ -1,6 +1,6 @@
+import DashboardFooter from "@/components/dashboard/footer";
+import DashboardHeader from "@/components/dashboard/header";
 import React from "react";
-import DashboardHeader from "../components/dashboard/header";
-import DashboardFooter from "../components/dashboard/footer";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   return (
