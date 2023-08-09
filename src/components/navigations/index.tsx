@@ -11,11 +11,11 @@ export default function Navigation() {
     <>
       <nav>
         <ul className={style.navWrapper}>
-          {navData.map((item: any, index: number) => {
+          {navData.map((item: any) => {
             const isActive = pathname === item.url;
             return (
               <>
-                <li key={item.id}>
+                <li key={Number(item.id)}>
                   <Link
                     className={`${isActive ? style.active : ""}`}
                     href={item.url}

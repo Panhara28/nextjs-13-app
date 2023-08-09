@@ -6,10 +6,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Moc Development Team", url: "https://moc.gov.kh" }],
 };
 
-export default function DashboardLayout({
-  children,
-}: {
+export default function Layout(props: {
   children: React.ReactNode;
+  analytics: React.ReactNode;
+  team: React.ReactNode;
 }) {
-  return <section>{children}</section>;
+  return (
+    <section>
+      {props.children} {props.analytics} {props.team}
+    </section>
+  );
 }

@@ -1,7 +1,13 @@
-export default function DashboardPage() {
+import { Suspense } from "react";
+import Loading from "./loading";
+import Title from "@/components/dashboard/title";
+
+export default async function DashboardPage() {
   return (
     <>
-      <h1>Dashboard Layout</h1>
+      <Suspense fallback={<Loading />}>
+        <Title />
+      </Suspense>
     </>
   );
 }
